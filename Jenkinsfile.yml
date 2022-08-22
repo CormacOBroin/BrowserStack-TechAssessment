@@ -21,7 +21,7 @@ pipeline {
 		}
 		stage("deploy"){
 			steps {
-				echo 'deploying the application'
+				echo 'No application to deploy, this is just for running tests'
 			}
 		}
 	}
