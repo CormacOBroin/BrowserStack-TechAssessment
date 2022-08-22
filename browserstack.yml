@@ -1,0 +1,30 @@
+userName: cormacobroin_HotWlU
+accessKey: tjwEyF8XS9A5e9dyxoEp
+platforms:
+  - os: Windows
+    osVersion: 11
+    browserName: chrome
+    browserVersion: 103.0
+  - os: Windows
+    osVersion: 10
+    browserName: firefox
+    browserVersion: 102.0
+  - os: OS X
+    osVersion: Monterey
+    browserName: chrome
+    browserVersion: 103.0
+  - os: Windows
+    osVersion: 11
+    browserName: chrome
+    browserVersion: 102.0
+  - os: OS X
+    osVersion: Catalina
+    browserName: chrome
+    browserVersion: 101.0
+parallelsPerPlatform: 5
+browserstackLocal: true
+buildName: BrowserStackTechAssessment
+projectName: BrowserStack Sample
+debug: false
+networkLogs: false
+consoleLogs: errors
