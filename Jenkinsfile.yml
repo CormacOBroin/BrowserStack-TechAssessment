@@ -5,20 +5,18 @@ pipeline {
 	stages {
 		stage("setup"){
 			steps {
-				browserstack(credntialsId: '50e72f61-f2da-4397-b6cb-92e537654425', localConfig: [localOptions: '', localPath: '']){
-				echo 'Setting up parameters'
-					sh 'wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-win32.zip"'
-                	sh 'powershell.exe D:\BrowserStackLocal.exe'
-                	sh './BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon stop'
+				browserstack(credntialsId: '50e72f61-f2da-4397-b6cb-92e537654425'){
 				}
 				// Enable reporting in Jenkins
-            	browserStackReportPublisher 'automate'
+            			browserStackReportPublisher 'automate'
 			}
 		}
 		stage("test"){
 			steps {
 				echo 'Running the application'
-				mvn test -P sample-test
+				maven('Maven') {
+				sh 'mvn test -P sample-test'
+				}
 			}
 		}
 		stage("deploy"){
