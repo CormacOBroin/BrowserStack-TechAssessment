@@ -23,7 +23,7 @@ platforms:
     browserVersion: 101.0
 parallelsPerPlatform: 5
 browserstackLocal: true
-buildName: BrowserStackTechAssessment
+buildName: BrowserStackTechAssessmentSimpleSuite
 projectName: BrowserStack Sample
 debug: false
 networkLogs: false
